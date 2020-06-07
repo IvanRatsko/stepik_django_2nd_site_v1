@@ -61,9 +61,9 @@ class VacancyView(DetailView):
         return context
 
 
-def custom_handler404(request):
-    return HttpResponseNotFound('Ошибка 404')
+def custom_handler404(request, exception):
+    return HttpResponseNotFound('<h1 align="center">Ошибка 404</h1>')
 
 
 def custom_handler500(request):
-    return HttpResponseNotFound('Ошибка 500')
+    return HttpResponseNotFound('<h1 align="center">Ошибка 500</h1>')
